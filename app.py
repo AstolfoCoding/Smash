@@ -11,7 +11,7 @@ class Character(db.Model):
     desc = db.Column(db.String(120),unique=False,nullable=True)
 
     def __repr__(self):
-        return '<Character: %r>' % self.name
+        return '<%r>' % self.name
 
 @app.route('/characters')
 def characters():
