@@ -16,8 +16,10 @@ class Character(db.Model):
         return '<%r>' % self.name
 
 
-character_blueprint = Blueprint('character', __name__, template_folder='templates')
-
+character_blueprint = Blueprint(
+                        'character',
+                        __name__,
+                        template_folder='templates')
 
 @app.route('/')
 def index():
