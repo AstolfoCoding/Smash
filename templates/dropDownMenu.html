@@ -1,0 +1,8 @@
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    {% for item in list %}
+        <li><a href="/character/{{item.name}}">{{ item.name }}</a></li>
+    {% endfor %}
+  </div>
+</div>

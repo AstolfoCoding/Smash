@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Characters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-<h1>The input Smash Character is : {{ value }}</h1>
+<h1>The input Smash Character is : {{ name }}</h1>
 
+{% include 'dropDownMenu.html' %}
 </body>
 </html>

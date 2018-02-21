@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Characters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1>The input Smash Character is : {{ name }}</h1>
+<p>{{ description }}</p>
+<form action="/rest/description/update" method="post">
+    <input type="hidden" name="name" value="{{ name }}">
+    <textarea name="desc">{{description}}</textarea>
+    <input type="submit" value="Submit">
+</form>
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    {% for item in list %}
+        <li><a href="/character/{{item.name}}">{{ item.name }}</a></li>
+    {% endfor %}
+  </div>
+</div>
+
+</body>
+</html>
