@@ -16,19 +16,14 @@ class Character(db.Model):
         return '<%r>' % self.name
 
 
-<<<<<<< HEAD
-@app.route('/characters')
-def characters():
-    return 'characters'
-=======
-character_blueprint = Blueprint('character', __name__, template_folder='templates')
-
+character_blueprint = Blueprint(
+                        'character',
+                        __name__,
+                        template_folder='templates')
 
 @app.route('/')
 def index():
     return render_template('index.html')
-
->>>>>>> b70da3595d5f44c36045702c7153a8256e2f2ce2
 
 
 @app.route('/characters/<character>')
